@@ -1155,6 +1155,7 @@ button, select, input, textarea { font-family: inherit; }
   .gallery__item {
     flex: 0 0 72vw;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     aspect-ratio: 3/4;
     margin-bottom: 0;
   }
