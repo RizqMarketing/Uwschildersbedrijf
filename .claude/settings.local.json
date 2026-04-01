@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(python -m http.server 3000)",
+      "Bash(start:*)",
+      "Bash(mkdir -p \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf6.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/interieur.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf9..jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/exterieur.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf22.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/monument.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf5.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/lakwerk.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf2.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/portfolio-deur.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf10.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/portfolio-modern.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf14.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/portfolio-boerderij.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf4.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/portfolio-bijgebouw.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf21.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/portfolio-trap.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf11.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/over-back.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf15.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/over-front.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf4.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/over-huis.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf15.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/over-deur.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf7.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/behangen.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf8.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/stucwerk.jpeg\")",
+      "Bash(cp \"C:/Users/mazin/Downloads/verf3.jpeg\" \"C:/Users/mazin/Nico - Schilderswebsite 1.0/images/houtrot.jpeg\")",
+      "Bash(powershell -Command \"Stop-Process -Id 27880 -Force -ErrorAction SilentlyContinue; Write-Host 'Done'\")"
+    ]
+  }
+}

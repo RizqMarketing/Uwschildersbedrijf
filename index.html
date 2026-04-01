@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uwschildersbedrijf.nl — Vakkundige Schilders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">
+      <img src="images/logo.png" alt="Uw Schildersbedrijf" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="#diensten">Diensten</a></li>
+      <li><a href="#werk">Werk</a></li>
+      <li><a href="#over">Over ons</a></li>
+      <li><a href="#contact" class="nav__cta">Contact</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="#diensten" class="mobile-link"><span class="mobile-link__num">01</span>Diensten</a></li>
+      <li><a href="#werk" class="mobile-link"><span class="mobile-link__num">02</span>Werk</a></li>
+      <li><a href="#over" class="mobile-link"><span class="mobile-link__num">03</span>Over ons</a></li>
+      <li><a href="#contact" class="mobile-link"><span class="mobile-link__num">04</span>Contact</a></li>
+    </ul>
+    <div class="mobile-footer">
+      <a href="mailto:info@uwschildersbedrijf.nl" class="mobile-tel">info@uwschildersbedrijf.nl</a>
+      <a href="#contact" class="btn btn--primary mobile-link mobile-cta offerte-trigger">Vraag offerte aan</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grain"></div>
+      <div class="hero__gradient"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__eyebrow reveal">
+        <span class="dot"></span> Uwschildersbedrijf.nl
+      </div>
+      <h1 class="hero__title reveal">
+        Vakmanschap<br />
+        <em>in elke</em><br />
+        verfstreek
+      </h1>
+      <p class="hero__sub reveal">
+        Wij brengen kleur tot leven — van monumentale<br class="br-desktop" />
+        panden tot moderne interieurs. Precies. Duurzaam. Mooi.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#contact" class="btn btn--primary offerte-trigger">Vraag een offerte aan</a>
+        <a href="#werk" class="btn btn--ghost">Bekijk ons werk</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>Interieur</span><span class="sep">·</span>
+        <span>Exterieur</span><span class="sep">·</span>
+        <span>Monumenten</span><span class="sep">·</span>
+        <span>Nieuwbouw</span><span class="sep">·</span>
+        <span>Renovatie</span><span class="sep">·</span>
+        <span>Lakwerk</span><span class="sep">·</span>
+        <span>Interieur</span><span class="sep">·</span>
+        <span>Exterieur</span><span class="sep">·</span>
+        <span>Monumenten</span><span class="sep">·</span>
+        <span>Nieuwbouw</span><span class="sep">·</span>
+        <span>Renovatie</span><span class="sep">·</span>
+        <span>Lakwerk</span><span class="sep">·</span>
+        <span>Interieur</span><span class="sep">·</span>
+        <span>Exterieur</span><span class="sep">·</span>
+        <span>Monumenten</span><span class="sep">·</span>
+        <span>Nieuwbouw</span><span class="sep">·</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIENSTEN -->
+  <section class="diensten" id="diensten">
+    <div class="section-label reveal">
+      <span class="dot dot--dark"></span> Onze diensten
+    </div>
+    <h2 class="section-title reveal">
+      Alles onder<br /><em>één dak</em>
+    </h2>
+    <div class="diensten__grid">
+      <a href="interieurschilderwerk.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/interieur-new.png')">
+          <span class="dienst__num">01</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Interieur­schilderwerk</h3>
+          <p>Van wanden en plafonds tot houtwerk en deuren — strak, schoon en op tijd.</p>
+        </div>
+      </a>
+      <a href="exterieurschilderwerk.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/exterieur-new.png')">
+          <span class="dienst__num">02</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Exterieur­schilderwerk</h3>
+          <p>Duurzame bescherming tegen de elementen met topkwaliteit buitenverf.</p>
+        </div>
+      </a>
+      <a href="monumentrestauratie.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/monument-new.png')">
+          <span class="dienst__num">03</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Monument­restauratie</h3>
+          <p>Herstel van historische panden met respect voor origineel karakter.</p>
+        </div>
+      </a>
+      <a href="lakwerk-spuitwerk.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/lakwerk-new.png')">
+          <span class="dienst__num">04</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Lakwerk & Spuitwerk</h3>
+          <p>Strak gespoten keukens, deuren en trappen. Hoogglans, mat of satijn.</p>
+        </div>
+      </a>
+      <a href="kleuradvies.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/kleuradvies-new.png')">
+          <span class="dienst__num">05</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Kleuradvies & Begeleiding</h3>
+          <p>Onze kleurspecialisten adviseren u gratis voorafgaand aan elk project.</p>
+        </div>
+      </a>
+      <a href="behangen.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/behangen-new.png')">
+          <span class="dienst__num">06</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Behangen</h3>
+          <p>Strak behang van vloer tot plafond — vliesbehang, structuur en glasvezel.</p>
+        </div>
+      </a>
+      <a href="stucwerk-spachtelputz.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/stucwerk-new.png')">
+          <span class="dienst__num">07</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Stucwerk & Spachtelputz</h3>
+          <p>Strakke wanden als basis voor een perfect eindresultaat.</p>
+        </div>
+      </a>
+      <a href="houtrotherstel.html" class="dienst__card reveal">
+        <div class="dienst__img" style="background-image:url('images/houtrot-new.png')">
+          <span class="dienst__num">08</span>
+        </div>
+        <div class="dienst__body">
+          <h3>Houtrot­herstel</h3>
+          <p>Houtrot professioneel hersteld en behandeld — duurzaam en op maat.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- WERK / PORTFOLIO -->
+  <section class="werk" id="werk">
+    <div class="werk__header">
+      <div class="section-label reveal">
+        <span class="dot dot--light"></span> Portfolio
+      </div>
+      <h2 class="section-title section-title--light reveal">
+        Geselecteerd<br /><em>werk</em>
+      </h2>
+    </div>
+    <div class="gallery">
+      <div class="gallery__item reveal" style="--img:url('images/verf1.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf2.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf3.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf4.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf5.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf6.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf7.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf8.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf9.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf10.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf11.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf12.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf13.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf14.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf15.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf16.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf17.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf18.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf19.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf20.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf21.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf22.jpeg')"></div>
+      <div class="gallery__item reveal" style="--img:url('images/verf23.jpeg')"></div>
+    </div>
+  </section>
+
+  <!-- OVER ONS / EDITORIAL SPLIT -->
+  <section class="over" id="over">
+    <div class="over__left reveal">
+      <div class="section-label">
+        <span class="dot dot--dark"></span> Over Uw Schildersbedrijf
+      </div>
+      <h2 class="section-title">
+        Kwaliteit die<br /><em>voor zich spreekt</em>
+      </h2>
+      <p class="over__body">Uwschildersbedrijf.nl is een professioneel schildersbedrijf met ruime ervaring in binnen- en buitenschilderwerk. Van strakke interieurs tot complete gevels — wij leveren werk waar wij trots op zijn en u blij van wordt.</p>
+      <p class="over__body">Wij werken met A-merkverf, houden onze afspraken en zorgen voor een nette werkplek. Geen verrassingen achteraf — gewoon degelijk vakwerk tegen een eerlijke prijs.</p>
+      <div class="over__badges">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          5 jaar garantie
+        </div>
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Op tijd & binnen budget
+        </div>
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          Erkend vakbedrijf
+        </div>
+      </div>
+    </div>
+    <div class="over__right reveal">
+      <div class="over__img-stack">
+        <div class="over__img over__img--back" style="background-image:url('images/over-huis.jpeg')"></div>
+        <div class="over__img over__img--front" style="background-image:url('images/over-deur.jpeg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="testimonials__inner">
+      <div class="testimonials__head reveal">
+        <div class="section-label">
+          <span class="dot dot--light"></span> Wat klanten zeggen
+        </div>
+        <h2 class="section-title section-title--light">Wat klanten<br /><em>over ons zeggen</em></h2>
+      </div>
+      <div class="testimonials__cols">
+        <div class="tcol reveal">
+          <div class="tcol__stars">★★★★★</div>
+          <blockquote class="tcol__quote">"Snelle planning en goede communicatie. Geen onverwachte kosten achteraf. Werk ziet er degelijk en netjes uit. Al met al een positieve ervaring."</blockquote>
+          <div class="tcol__rule"></div>
+          <div class="tcol__author">
+            <strong>Marijn Bos</strong>
+            
+          </div>
+        </div>
+        <div class="tcol reveal">
+          <div class="tcol__stars">★★★★★</div>
+          <blockquote class="tcol__quote">"Vakmensen die weten wat ze doen. Alles rustig uitgelegd vooraf. Geen verrassingen achteraf. Blij met het eindresultaat."</blockquote>
+          <div class="tcol__rule"></div>
+          <div class="tcol__author">
+            <strong>Emily Watson</strong>
+            
+          </div>
+        </div>
+        <div class="tcol reveal">
+          <div class="tcol__stars">★★★★★</div>
+          <blockquote class="tcol__quote">"Goed geholpen, fijne mensen — Nico, Frank en Maarten. Duidelijke afspraken gemaakt, goed werk afgeleverd. Heel tevreden met het resultaat."</blockquote>
+          <div class="tcol__rule"></div>
+          <div class="tcol__author">
+            <strong>Edward Kort</strong>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCES -->
+  <section class="proces">
+    <div class="proces__header reveal">
+      <div class="section-label">
+        <span class="dot dot--dark"></span> Werkwijze
+      </div>
+      <h2 class="section-title">
+        Zo werken<br /><em>wij</em>
+      </h2>
+    </div>
+    <div class="proces__steps">
+      <div class="proces__step reveal">
+        <div class="pstep__top">
+          <div class="pstep__circle">
+            <span class="pstep__num">01</span>
+          </div>
+          <div class="pstep__line"></div>
+        </div>
+        <h4 class="pstep__title">Inspectie & offerte</h4>
+        <p class="pstep__desc">Gratis langskomen, bekijken en binnen 48 uur een heldere, vrijblijvende offerte. Geen verborgen kosten.</p>
+      </div>
+      <div class="proces__step reveal">
+        <div class="pstep__top">
+          <div class="pstep__circle">
+            <span class="pstep__num">02</span>
+          </div>
+          <div class="pstep__line"></div>
+        </div>
+        <h4 class="pstep__title">Kleuradvies & planning</h4>
+        <p class="pstep__desc">Samen de perfecte kleuren kiezen. Wij plannen op een moment dat u past en houden u tussentijds op de hoogte.</p>
+      </div>
+      <div class="proces__step reveal">
+        <div class="pstep__top">
+          <div class="pstep__circle">
+            <span class="pstep__num">03</span>
+          </div>
+          <div class="pstep__line"></div>
+        </div>
+        <h4 class="pstep__title">Vakkundig schilderwerk</h4>
+        <p class="pstep__desc">Snel, netjes en met oog voor elk detail. Dagelijks ruimen we de werkplek volledig op.</p>
+      </div>
+      <div class="proces__step reveal">
+        <div class="pstep__top">
+          <div class="pstep__circle">
+            <span class="pstep__num">04</span>
+          </div>
+        </div>
+        <h4 class="pstep__title">Oplevering & garantie</h4>
+        <p class="pstep__desc">Samen controleren, u tekent voor akkoord en wij zorgen dat alles naar wens is opgeleverd.</p>
+      </div>
+    </div>
+    <div class="proces__footer reveal">
+      <a href="#contact" class="btn btn--primary offerte-trigger">Vraag gratis offerte aan</a>
+    </div>
+  </section>
+
+
+<!-- CONTACT / CTA -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__left reveal">
+        <div class="section-label">
+          <span class="dot dot--light"></span> Neem contact op
+        </div>
+        <h2 class="section-title section-title--light">
+          Klaar voor een<br /><em>nieuw begin?</em>
+        </h2>
+        <p class="contact__sub">Vraag vandaag nog een gratis offerte aan. Wij proberen binnen één dag te reageren.</p>
+        <div class="contact__info">
+          <a href="mailto:info@uwschildersbedrijf.nl" class="contact__detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            info@uwschildersbedrijf.nl
+          </a>
+          <span class="contact__detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Geurdeland 17G, 6673 DR Andelst
+          </span>
+          <span class="contact__detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            KvK: 94106819
+          </span>
+        </div>
+      </div>
+      <div class="contact__right reveal">
+        <form class="form" id="contactForm">
+          <div class="form__row">
+            <div class="form__group">
+              <label for="naam">Naam</label>
+              <input type="text" id="naam" name="naam" placeholder="Jan de Vries" required />
+            </div>
+            <div class="form__group">
+              <label for="email">E-mailadres</label>
+              <input type="email" id="email" name="email" placeholder="jan@email.nl" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="dienst">Type project</label>
+            <select id="dienst" name="dienst">
+              <option value="">Selecteer een dienst</option>
+              <option>Interieurschilderwerk</option>
+              <option>Exterieur­schilderwerk</option>
+              <option>Monumentrestauratie</option>
+              <option>Lakwerk & Spuitwerk</option>
+              <option>Anders</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="bericht">Bericht</label>
+            <textarea id="bericht" name="bericht" rows="4" placeholder="Vertel ons meer over uw project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Verstuur aanvraag
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/logo.png" alt="Uw Schildersbedrijf" class="footer__logo" />
+        <p>Vakkundige schilders voor binnen<br />en buiten. Altijd degelijk werk.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h5>Diensten</h5>
+          <a href="interieurschilderwerk.html">Interieurschilderwerk</a>
+          <a href="exterieurschilderwerk.html">Exterieur­schilderwerk</a>
+          <a href="monumentrestauratie.html">Monumentrestauratie</a>
+          <a href="lakwerk-spuitwerk.html">Lakwerk & Spuitwerk</a>
+          <a href="kleuradvies.html">Kleuradvies</a>
+          <a href="behangen.html">Behangen</a>
+          <a href="stucwerk-spachtelputz.html">Stucwerk</a>
+          <a href="houtrotherstel.html">Houtrotherstel</a>
+        </div>
+        <div class="footer__col">
+          <h5>Bedrijf</h5>
+          <a href="#over">Over ons</a>
+          <a href="#werk">Portfolio</a>
+          <a href="#diensten">Diensten</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h5>Contact</h5>
+          <a href="mailto:info@uwschildersbedrijf.nl">info@uwschildersbedrijf.nl</a>
+          <span>Geurdeland 17G<br />6673 DR Andelst</span>
+          <span>KvK: 94106819</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 Uwschildersbedrijf.nl — Alle rechten voorbehouden</span>
+      <div class="footer__legal">
+        <a href="#">Privacybeleid</a>
+        <a href="#">Algemene voorwaarden</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OFFERTE POPUP -->
+  <div class="offerte-overlay" id="offerteOverlay" role="dialog" aria-modal="true">
+    <div class="offerte-modal">
+
+      <!-- Left: brand panel -->
+      <div class="offerte-side">
+        <div class="offerte-side__bg" style="background-image:url('images/over-front.jpeg')"></div>
+        <div class="offerte-side__content">
+          <img src="images/logo.png" alt="Uw Schildersbedrijf" class="offerte-side__logo" />
+          <div class="offerte-side__badges">
+            <div class="offerte-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Gratis &amp; vrijblijvend
+            </div>
+            <div class="offerte-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Reactie binnen 24 uur
+            </div>
+            <div class="offerte-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              5 jaar garantie
+            </div>
+            <div class="offerte-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Erkend vakbedrijf
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form panel -->
+      <div class="offerte-form-panel">
+        <button class="offerte-close" id="offerteClose" aria-label="Sluiten">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+
+        <!-- Progress indicator -->
+        <div class="offerte-progress">
+          <div class="offerte-progress__step active" data-s="1"><span>1</span><small>Project</small></div>
+          <div class="offerte-progress__line"><div class="offerte-progress__fill"></div></div>
+          <div class="offerte-progress__step" data-s="2"><span>2</span><small>Details</small></div>
+          <div class="offerte-progress__line"><div class="offerte-progress__fill"></div></div>
+          <div class="offerte-progress__step" data-s="3"><span>3</span><small>Contact</small></div>
+        </div>
+
+        <!-- Stap 1: Projecttype -->
+        <div class="offerte-step-content active" id="ostep1">
+          <div class="offerte-step-label"><span class="dot dot--dark"></span> Stap 1 van 3</div>
+          <h2 class="offerte-title">Wat voor project<br /><em>heeft u?</em></h2>
+          <div class="offerte-type-grid">
+            <button class="offerte-type-card" data-type="interieur">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Interieur</span>
+            </button>
+            <button class="offerte-type-card" data-type="exterieur">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+              <span>Exterieur</span>
+            </button>
+            <button class="offerte-type-card" data-type="monument">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Monument</span>
+            </button>
+            <button class="offerte-type-card" data-type="lakwerk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
+              <span>Lakwerk</span>
+            </button>
+            <button class="offerte-type-card" data-type="behangen">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M4 14h16M9 4v16M14 4v16"/></svg>
+              <span>Behangen</span>
+            </button>
+            <button class="offerte-type-card" data-type="anders">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+              <span>Anders</span>
+            </button>
+          </div>
+          <button class="btn btn--primary offerte-next-btn" id="onext1" disabled>
+            Volgende stap
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- Stap 2: Details -->
+        <div class="offerte-step-content" id="ostep2">
+          <div class="offerte-step-label"><span class="dot dot--dark"></span> Stap 2 van 3</div>
+          <h2 class="offerte-title">Vertel ons meer<br /><em>over uw project</em></h2>
+          <div class="offerte-fields">
+            <div class="offerte-field-group">
+              <label for="o-adres">Adres / locatie</label>
+              <input type="text" id="o-adres" placeholder="Straat, huisnummer, stad" />
+            </div>
+            <div class="offerte-field-group">
+              <label for="o-periode">Gewenste startperiode</label>
+              <select id="o-periode">
+                <option value="">Wanneer wilt u starten?</option>
+                <option>Zo snel mogelijk</option>
+                <option>Binnen 1 maand</option>
+                <option>1 – 3 maanden</option>
+                <option>3 – 6 maanden</option>
+                <option>Nog niet zeker</option>
+              </select>
+            </div>
+            <div class="offerte-field-group">
+              <label for="o-omschrijving">Omschrijving van het project</label>
+              <textarea id="o-omschrijving" rows="4" placeholder="Beschrijf uw project zo uitgebreid mogelijk..."></textarea>
+            </div>
+          </div>
+          <div class="offerte-nav">
+            <button class="btn offerte-back-btn" id="oback2">Terug</button>
+            <button class="btn btn--primary" id="onext2">
+              Volgende stap
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stap 3: Contact -->
+        <div class="offerte-step-content" id="ostep3">
+          <div class="offerte-step-label"><span class="dot dot--dark"></span> Stap 3 van 3</div>
+          <h2 class="offerte-title">Uw contact­<br /><em>gegevens</em></h2>
+          <div class="offerte-fields">
+            <div class="offerte-fields-row">
+              <div class="offerte-field-group">
+                <label for="o-naam">Naam</label>
+                <input type="text" id="o-naam" placeholder="Jan de Vries" />
+              </div>
+              <div class="offerte-field-group">
+                <label for="o-tel">Telefoon</label>
+                <input type="tel" id="o-tel" placeholder="06 12 34 56 78" />
+              </div>
+            </div>
+            <div class="offerte-field-group">
+              <label for="o-email">E-mailadres</label>
+              <input type="email" id="o-email" placeholder="jan@email.nl" />
+            </div>
+          </div>
+          <div class="offerte-nav">
+            <button class="btn offerte-back-btn" id="oback3">Terug</button>
+            <button class="btn btn--primary" id="osubmit">
+              Aanvraag versturen
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div class="offerte-step-content offerte-success-screen" id="ostepSuccess">
+          <div class="offerte-success__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h2 class="offerte-title" style="text-align:center">Aanvraag<br /><em>ontvangen!</em></h2>
+          <p class="offerte-success__sub">Bedankt voor uw aanvraag. Wij proberen binnen <strong>één dag</strong> persoonlijk contact met u op te nemen.</p>
+          <button class="btn btn--primary" id="oclose-success">Sluiten</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
