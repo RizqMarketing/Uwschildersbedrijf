@@ -1587,3 +1587,109 @@ button, select, input, textarea { font-family: inherit; }
   .offerte-fields-row { grid-template-columns: 1fr; }
   .offerte-progress { margin-bottom: 28px; }
 }
+
+
+/* ── WHATSAPP WIDGET ─────────────────────────────────────── */
+.wa-widget {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+
+.wa-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
+  position: relative;
+}
+
+.wa-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37,211,102,.55);
+}
+
+.wa-btn:hover + .wa-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.wa-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+  display: block;
+}
+
+/* Pulse ring */
+.wa-btn::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,.5);
+  animation: wa-pulse 2.2s ease-out infinite;
+}
+
+@keyframes wa-pulse {
+  0%   { transform: scale(1);   opacity: .9; }
+  70%  { transform: scale(1.35); opacity: 0;  }
+  100% { transform: scale(1.35); opacity: 0;  }
+}
+
+.wa-tooltip {
+  background: #1a1816;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: .82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 9px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  opacity: 0;
+  transform: translateX(8px);
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-right: none;
+  border-left-color: #1a1816;
+}
+
+@media (max-width: 600px) {
+  .wa-widget {
+    bottom: 20px;
+    right: 20px;
+  }
+  .wa-btn {
+    width: 52px;
+    height: 52px;
+  }
+  .wa-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+  .wa-tooltip { display: none; }
+}

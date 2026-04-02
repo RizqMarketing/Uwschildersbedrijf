@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Schilderstips & Vakkennis | Uwschildersbedrijf.nl</title>
+  <meta name="description" content="Praktische tips over schilderwerk, verfsoorten, houtrot, kleuradvies en meer. Geschreven door vakkundige schilders van Uwschildersbedrijf.nl." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-page-hero {
+      background: var(--ink);
+      padding: 140px 5% 88px;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-page-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -80px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,169,110,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .blog-page-hero__inner { max-width: 680px; }
+    .blog-page-hero__eyebrow {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .7rem; font-weight: 500;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.4rem;
+    }
+    .blog-page-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 500; line-height: 1.05;
+      letter-spacing: -.03em; color: var(--white);
+      margin-bottom: 1.2rem;
+    }
+    .blog-page-hero__title em { font-style: italic; color: var(--gold); }
+    .blog-page-hero__sub {
+      font-size: .95rem; color: rgba(255,255,255,.55);
+      line-height: 1.75; max-width: 520px;
+    }
+
+    /* Grid */
+    .blog-grid-section {
+      padding: 80px 5% 100px;
+      background: var(--cream);
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .blog-card {
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 36px 32px 32px;
+      display: flex; flex-direction: column;
+      gap: 0;
+      transition: box-shadow .3s, transform .3s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 14px 48px rgba(26,24,22,.1);
+      transform: translateY(-4px);
+    }
+    .blog-card__cat {
+      display: inline-block;
+      font-size: .68rem; font-weight: 500;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold-deep);
+      background: var(--bone);
+      border: 1px solid var(--sand);
+      border-radius: 6px;
+      padding: 4px 10px;
+      margin-bottom: 18px;
+      width: fit-content;
+    }
+    .blog-card__num {
+      font-family: var(--font-serif);
+      font-size: 3.5rem; font-weight: 700;
+      font-style: italic;
+      color: rgba(26,24,22,.05);
+      line-height: 1; margin-bottom: 20px;
+      display: block;
+    }
+    .blog-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem; font-weight: 500;
+      color: var(--ink); line-height: 1.25;
+      letter-spacing: -.02em;
+      margin-bottom: 12px;
+    }
+    .blog-card__excerpt {
+      font-size: .83rem; color: var(--ink-muted);
+      line-height: 1.7; margin-bottom: 24px;
+      flex: 1;
+    }
+    .blog-card__link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .8rem; font-weight: 500;
+      color: var(--gold-deep);
+      text-decoration: none;
+      transition: gap .2s;
+    }
+    .blog-card__link:hover { gap: 12px; }
+    .blog-card__link svg { width: 14px; height: 14px; }
+
+    @media (max-width: 960px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-page-hero { padding: 120px 5% 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">
+      <img src="images/logo.png" alt="Uw Schildersbedrijf" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="index.html#werk">Werk</a></li>
+      <li><a href="index.html#over">Over ons</a></li>
+      <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#diensten" class="mobile-link"><span class="mobile-link__num">01</span>Diensten</a></li>
+      <li><a href="index.html#werk" class="mobile-link"><span class="mobile-link__num">02</span>Werk</a></li>
+      <li><a href="index.html#over" class="mobile-link"><span class="mobile-link__num">03</span>Over ons</a></li>
+      <li><a href="index.html#contact" class="mobile-link"><span class="mobile-link__num">04</span>Contact</a></li>
+    </ul>
+    <div class="mobile-footer">
+      <a href="mailto:info@uwschildersbedrijf.nl" class="mobile-tel">info@uwschildersbedrijf.nl</a>
+      <a href="#" class="btn btn--primary mobile-cta offerte-trigger">Vraag offerte aan</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="blog-page-hero">
+    <div class="blog-page-hero__inner">
+      <div class="blog-page-hero__eyebrow reveal">
+        <span class="dot dot--light"></span> Kennis & vakmanschap
+      </div>
+      <h1 class="blog-page-hero__title reveal">
+        Schilderstips &<br /><em>vakkennis</em>
+      </h1>
+      <p class="blog-page-hero__sub reveal">
+        Praktische artikelen over schilderwerk, onderhoud, verfsoorten en kleuradvies — geschreven vanuit de praktijk.
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-grid-section">
+    <div class="blog-grid">
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Exterieur</span>
+        <span class="blog-card__num">01</span>
+        <h2 class="blog-card__title">5 tekenen dat je buitenschilderwerk aan vervanging toe is</h2>
+        <p class="blog-card__excerpt">Bladderend verfwerk, verkleurde kozijnen of barsten in het houtwerk — dit zijn signalen die u niet moet negeren. We zetten de vijf belangrijkste tekenen op een rij.</p>
+        <a href="blog-buitenschilderwerk-tekenen.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Interieur</span>
+        <span class="blog-card__num">02</span>
+        <h2 class="blog-card__title">Welke verfsoort past bij jouw interieur?</h2>
+        <p class="blog-card__excerpt">Mat, zijdeglans of hoogglans? Watergedragen of oplosmiddelgedragen? Een eerlijk overzicht van de verschillen en welke verf het best past in welke ruimte.</p>
+        <a href="blog-verfsoort-interieur.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Onderhoud</span>
+        <span class="blog-card__num">03</span>
+        <h2 class="blog-card__title">Houtrot voorkomen: zo bescherm je kozijnen en deuren</h2>
+        <p class="blog-card__excerpt">Houtrot begint klein maar kan snel grote schade veroorzaken. Leer de vroege signalen herkennen en wat u kunt doen om uw kozijnen en deuren te beschermen.</p>
+        <a href="blog-houtrot-voorkomen.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Kleuradvies</span>
+        <span class="blog-card__num">04</span>
+        <h2 class="blog-card__title">Kleuradvies voor je woning: zo kies je de juiste kleur</h2>
+        <p class="blog-card__excerpt">Kleur heeft veel meer invloed dan mensen denken. Licht, ruimtegrootte en bestaand meubilair spelen allemaal een rol. Praktische tips voor een keuze waar u lang blij van bent.</p>
+        <a href="blog-kleuradvies-woning.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Kosten</span>
+        <span class="blog-card__num">05</span>
+        <h2 class="blog-card__title">Wat kost buitenschilderwerk? Een eerlijk beeld</h2>
+        <p class="blog-card__excerpt">Geen vage antwoorden, maar een helder overzicht van de factoren die de prijs bepalen. Zodat u weet waar u aan toe bent vóór u een offerte aanvraagt.</p>
+        <a href="blog-kosten-buitenschilderwerk.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Interieur</span>
+        <span class="blog-card__num">06</span>
+        <h2 class="blog-card__title">Behangen of schilderen: wat past bij jouw situatie?</h2>
+        <p class="blog-card__excerpt">Behang geeft warmte en karakter, schilderwerk is flexibeler en makkelijker te wijzigen. We zetten de voor- en nadelen naast elkaar zodat u een weloverwogen keuze kunt maken.</p>
+        <a href="blog-behangen-of-schilderen.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Vakmanschap</span>
+        <span class="blog-card__num">07</span>
+        <h2 class="blog-card__title">Spuitwerk of rolwerk: wanneer kies je wat?</h2>
+        <p class="blog-card__excerpt">Spuitwerk is sneller en geeft een bijzonder egaal resultaat. Rolwerk biedt meer controle en past beter in bepaalde situaties. Wat zijn de echte verschillen?</p>
+        <a href="blog-spuitwerk-of-rolwerk.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Werkwijze</span>
+        <span class="blog-card__num">08</span>
+        <h2 class="blog-card__title">Zo bereiden wij een schilderklus voor</h2>
+        <p class="blog-card__excerpt">Goede voorbereiding is het halve werk — dat is geen cliché, maar een vakmansprincipe. Van eerste inspectie tot oplevering: een kijkje achter de schermen.</p>
+        <a href="blog-voorbereiding-schilderklus.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Monumenten</span>
+        <span class="blog-card__num">09</span>
+        <h2 class="blog-card__title">Monumentale panden schilderen: waarom vakmanschap ertoe doet</h2>
+        <p class="blog-card__excerpt">Monumentale panden stellen andere eisen dan moderne woningen. Speciale materialen, strikte regels en jarenlange ervaring zijn geen overbodige luxe — ze zijn een vereiste.</p>
+        <a href="blog-monumenten-schilderen.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="blog-card reveal">
+        <span class="blog-card__cat">Afwerking</span>
+        <span class="blog-card__num">10</span>
+        <h2 class="blog-card__title">Stucwerk of spachtelputz: wat past bij jouw woning?</h2>
+        <p class="blog-card__excerpt">Beide zijn decoratieve wandafwerkingen, maar ze geven een heel ander resultaat. We leggen uit wat het verschil is en wanneer welke keuze logisch is.</p>
+        <a href="blog-stucwerk-spachtelputz.html" class="blog-card__link">
+          Lees artikel
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/logo.png" alt="Uw Schildersbedrijf" class="footer__logo" />
+        <p>Vakkundige schilders voor binnen<br />en buiten. Altijd degelijk werk.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h5>Diensten</h5>
+          <a href="interieurschilderwerk.html">Interieurschilderwerk</a>
+          <a href="exterieurschilderwerk.html">Exterieurschilderwerk</a>
+          <a href="monumentrestauratie.html">Monumentrestauratie</a>
+          <a href="lakwerk-spuitwerk.html">Lakwerk &amp; Spuitwerk</a>
+          <a href="kleuradvies.html">Kleuradvies</a>
+          <a href="behangen.html">Behangen</a>
+          <a href="stucwerk-spachtelputz.html">Stucwerk</a>
+          <a href="houtrotherstel.html">Houtrotherstel</a>
+        </div>
+        <div class="footer__col">
+          <h5>Bedrijf</h5>
+          <a href="index.html#over">Over ons</a>
+          <a href="index.html#werk">Portfolio</a>
+          <a href="index.html#diensten">Diensten</a>
+          <a href="blog.html">Blog</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h5>Contact</h5>
+          <a href="mailto:info@uwschildersbedrijf.nl">info@uwschildersbedrijf.nl</a>
+          <span>Geurdeland 17G<br />6673 DR Andelst</span>
+          <span>KvK: 94106819</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 Uwschildersbedrijf.nl — Alle rechten voorbehouden</span>
+      <div class="footer__legal">
+        <a href="#">Privacybeleid</a>
+        <a href="#">Algemene voorwaarden</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OFFERTE POPUP -->
+  <div class="offerte-overlay" id="offerteOverlay" role="dialog" aria-modal="true">
+    <div class="offerte-modal">
+      <div class="offerte-side">
+        <div class="offerte-side__bg" style="background-image:url('images/interieur-new.png')"></div>
+        <div class="offerte-side__content">
+          <img src="images/logo.png" alt="Uw Schildersbedrijf" class="offerte-side__logo" />
+          <div class="offerte-side__badges">
+            <div class="offerte-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Gratis &amp; vrijblijvend</div>
+            <div class="offerte-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Reactie binnen 24 uur</div>
+            <div class="offerte-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>5 jaar garantie</div>
+            <div class="offerte-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Erkend vakbedrijf</div>
+          </div>
+        </div>
+      </div>
+      <div class="offerte-form-panel">
+        <button class="offerte-close" id="offerteClose" aria-label="Sluiten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <div class="offerte-progress">
+          <div class="offerte-progress__step active" data-s="1"><span>1</span><small>Project</small></div>
+          <div class="offerte-progress__line"><div class="offerte-progress__fill"></div></div>
+          <div class="offerte-progress__step" data-s="2"><span>2</span><small>Details</small></div>
+          <div class="offerte-progress__line"><div class="offerte-progress__fill"></div></div>
+          <div class="offerte-progress__step" data-s="3"><span>3</span><small>Contact</small></div>
+        </div>
+        <div class="offerte-step-content active" id="ostep1">
+          <div class="offerte-step-label"><span class="dot dot--dark"></span> Stap 1 van 3</div>
+          <h2 class="offerte-title">Wat voor project<br /><em>heeft u?</em></h2>
+          <div class="offerte-type-grid">
+            <button class="offerte-type-card" data-type="interieur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Interieur</span></button>
+            <button class="offerte-type-card" data-type="exterieur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg><span>Exterieur</span></button>
+            <button class="offerte-type-card" data-type="monument"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span>Monument</span></button>
+            <button class="offerte-type-card" data-type="lakwerk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg><span>Lakwerk</span></button>
+            <button class="offerte-type-card" data-type="behangen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M4 14h16M9 4v16M14 4v16"/></svg><span>Behangen</span></button>
+            <button class="offerte-type-card" data-type="anders"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg><span>Anders</span></button>
+          </div>
+          <button class="btn btn--primary offerte-next-btn" id="onext1" disabled>Volgende stap <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="offerte-step-content" id="ostep2">
+          <div class="offerte-step-label"><span class="dot dot--dark"></span> Stap 2 van 3</div>
+          <h2 class="offerte-title">Vertel ons meer<br /><em>over uw project</em></h2>
+          <div class="offerte-fields">
+            <div class="offerte-field-group"><label for="o-adres">Adres / locatie</label><input type="text" id="o-adres" placeholder="Straat, huisnummer, stad" /></div>
+            <div class="offerte-field-group"><label for="o-periode">Gewenste startperiode</label><select id="o-periode"><option value="">Wanneer wilt u starten?</option><option>Zo snel mogelijk</option><option>Binnen 1 maand</option><option>1 – 3 maanden</option><option>3 – 6 maanden</option><option>Nog niet zeker</option></select></div>
+            <div class="offerte-field-group"><label for="o-omschrijving">Omschrijving van het project</label><textarea id="o-omschrijving" rows="4" placeholder="Beschrijf uw project zo uitgebreid mogelijk..."></textarea></div>
+          </div>
+          <div class="offerte-nav"><button class="btn offerte-back-btn" id="oback2">Terug</button><button class="btn btn--primary" id="onext2">Volgende stap <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+        </div>
+        <div class="offerte-step-content" id="ostep3">
+          <div class="offerte-step-label"><span class="dot dot--dark"></span> Stap 3 van 3</div>
+          <h2 class="offerte-title">Uw contact­<br /><em>gegevens</em></h2>
+          <div class="offerte-fields">
+            <div class="offerte-fields-row">
+              <div class="offerte-field-group"><label for="o-naam">Naam</label><input type="text" id="o-naam" placeholder="Jan de Vries" /></div>
+              <div class="offerte-field-group"><label for="o-tel">Telefoon</label><input type="tel" id="o-tel" placeholder="06 12 34 56 78" /></div>
+            </div>
+            <div class="offerte-field-group"><label for="o-email">E-mailadres</label><input type="email" id="o-email" placeholder="jan@email.nl" /></div>
+          </div>
+          <div class="offerte-nav"><button class="btn offerte-back-btn" id="oback3">Terug</button><button class="btn btn--primary" id="osubmit">Aanvraag versturen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+        </div>
+        <div class="offerte-step-content offerte-success-screen" id="ostepSuccess">
+          <div class="offerte-success__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h2 class="offerte-title" style="text-align:center">Aanvraag<br /><em>ontvangen!</em></h2>
+          <p class="offerte-success__sub">Bedankt voor uw aanvraag. Wij proberen binnen <strong>één dag</strong> persoonlijk contact met u op te nemen.</p>
+          <button class="btn btn--primary" id="oclose-success">Sluiten</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
